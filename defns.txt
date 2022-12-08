@@ -1,0 +1,164 @@
+# https://www.youtube.com/watch?v=6tdfhlIoxOw&ab_channel=WsCubeTech
+
+
+1. Framework : A frameowrk is a particular set of rules, ideas or beliefs which you use in
+order to deal with problems or to decide what to do.
+
+2. What is django?
+-  Django is a high-level python web application framework that enables the rapid development of web applications.
+- Open-source python framework
+- follows the model-view-template (mostly use MVC) architectural pattern.
+- most popular python framework.
+
+3. Why django?
+- It is secure - authenticated.
+- MVT support and object oriented.
+- Built in authentication and authorization.
+- Packaging systems.
+
+4. Companies
+- Instagram - complete django framework
+- Spotify
+
+5. Pre-requisite and inside the course
+- HTML, CSS and Javascript : FRONT-END Technologies
+- Python
+
+6. MVT (MODEL VIEW TEMPLATES) :
+-  MVT is a softwre design pattern
+- Model : is going to act as interface of your data
+- View : The view is the user interface - what you see in browser when you render a website.
+- Templates: consists of the static parts of the desired HTML output as 
+
+
+                    model
+URl - django - view
+                    template
+
+
+
+<------------------------------------------------------------------------------------------>
+- manage.py - used for migrate or managing project, runing project.
+
+
+- Create these file:
+templates - all html files
+static - stores statics files: javascript, images, etc
+media - dynamic image or dynamic files
+
+
+-- django creates a same folder inside, which is called app. 
+
+--python manage.py makemigrations : to be use when we make new model for migrate and then use
+python manage.py migrate
+-- migrate to create table
+
+
+
+----------------
+
+website is divided into two parts : main url which is viewed by user and admin panel where
+client adds data and keeps on adding on the website
+
+
+
+---------
+
+urls and views in django
+urls can be considered as routes. 
+
+view is called when u hit a url. Two ways: POST and GET
+all urls are connected to views. Views are of two types : functions and class based
+
+urls.py  - all urls defined
+views.py - to be created, the connect these two files.
+
+
+Total no. of views = total no. of urls
+
+no. of urls = functions of views
+
+
+------------------
+
+dynamic routes : slug changes, the data on the page changes but the page remains the same!!
+
+
+routes:
+integer
+string
+slug : it is of the type hello-web-ii
+-----------------
+
+2:55 - 3:23 
+{% include %} - common section, that can be included each url
+
+{%extend} - header and footer included and in between the data can be changed everytime
+and we keep extending the base.html
+
+url - inside urls.py 
+two methods: 
+1.direct : using '/about-us' used in views.py
+2. url tag: name="contact" or something give name, then use names 
+{% url 'contact' %}
+
+
+-------------
+HTTP request methods in django:
+
+1. GET method: The get method sends the encoded user information appended
+to the page request. the page and the encoded information are 
+separated by the ? character.
+
+- uses key value pair in the url
+- restricted to send upto 1024 characters only
+- NEVER USE GET METHOD IF U HAVE PASSWORD OR 
+OTHER sensitive information
+-  cannot be used to send binary data, like images or word documents, to the server
+
+2. POST method:
+- POST method transfer informatio via HTTP headers
+The information is encoded as described in case of GET METHOD andput ito a header called QUERY_STRING.
+
+- no restriction on data size to be sensitive
+- can be used to send ASCII as well as binary data
+- the data sent by POST method goes thru HTTP reader
+so security depends on HTTP protocol.
+- by using secure HTTP you can make sure that your info is secure.
+
+
+## Form needs an action and a method.
+
+To use POST method we have to make use of CSRF token: when a form is submitted, django checks 
+if form submitted is coming from same omain, django validates the same.
+
+If token is used, npo spamminh is possible for that reason we use csrf token.
+
+
+------------------------
+## 4:08:00
+page redirection :
+
+functions :
+1. we user the Httpresponseredirect method after we are done getting the input from the user
+- We just ned to give the path where we need to redirect
+
+when we use "action" attribute in forms, that means we can form submit on another url and
+we can view other fn on url and then we can get the data.
+
+if we dont use action, then userform url is reloaded and hit on the same page itself!!
+
+
+------------------
+Django forms model: creation and implementation
+
+- to use django forms, we have to make forms.py inside the app folder
+
+- there are many other fields for django forms for which one can check documentation (django)
+
+--------------------
+
+
+Models in your django application:
+- 
+- 

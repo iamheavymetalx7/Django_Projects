@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>{{title}}</title>
+    </head>
+
+    <body>
+        <p> this is nitish kumar, we will be getting forms here.</p>
+    <!--<form>
+            <label for ="">Val1</label>
+            <input type="text" name="num1">
+             
+            <br/>
+            <label for ="">val2</label>
+            <input type="text" name="num2">
+
+            <br/>
+
+            <button type="submit">Save</button>
+            <br/>
+            <br/>
+            output
+            <input type="text" value="{{output}}"/>
+        </form>
+    -->
+    <form method="post" action="{%url 'submitform' %}">
+        {% csrf_token %}
+
+        {{form}}
+        {% comment %} <label for ="">Val1</label>
+        <input type="text" name="num1" value="{{n1}}">
+         
+        <br/>
+        <label for ="">val2</label>
+        <input type="text" name="num2" value="{{n2}}">
+
+        <br/> {% endcomment %}
+
+        <button type="submit">Save</button>
+        <br/>
+        <br/>
+        output
+        <input type="text" value="{{output}}"/>
+    </form>        
+    </body>
+
+    
+</html>

@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>{{title}}</title>
+        <style>
+            .main{
+                width: 1000px;
+                background-color: red;
+                color: white;
+                padding: 20px;
+                font-size: 30px;
+                
+            }
+        </style>
+    </head>
+
+    <body>
+        Hello {{output}}
+        {% for c in clist%}
+
+
+
+        <div>
+            {{forloop.counter}}{{c}}
+        </div>
+        {%endfor%}
+
+    <br/>
+        <table border="1", cellpadding="10">
+            <tr>
+                <th> Name </th>
+                <th> Phone </th>
+            </tr>
+            {% for d in details %}
+            <tr>
+                <td>{{d.name}}</td>
+        
+                <td>{{d.phone}}</td>
+            <!-- here there is syntax differene
+            
+            
+            ususalyy in pyton we access dictionary elements using key {{ 
+               but here we use .key in order to access the value 
+             }}-->
+            </tr>
+            {% endfor %}
+    </table>
+
+    <br/>
+    {% for n in numbers %}
+        {% if n > 20 %}
+        <div>{{n}}</div>
+        {% endif %}
+    {%  endfor %}
+    </body>
+</html>
