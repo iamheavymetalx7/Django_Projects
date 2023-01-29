@@ -29,4 +29,7 @@ Function based views are a little more explicit and easier to understand while c
 
 There was a point where django only had function based views. There were methods added to take care of common actions but extending functions can be very limiting so to fix this problem django added class based views.
 
+Improvements:
+1. Can add Forgot Password option for the users.
+
 <img width="725" alt="Screenshot 2023-01-29 at 3 33 08 PM" src="https://user-images.githubusercontent.com/52539396/215321332-6c3411dc-39dc-4464-9d59-092ed52889d1.png">
